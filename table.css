@@ -77,7 +77,8 @@ textarea {
 
 .buttond {
   background-color: darkblue;
-  padding: 0.5vw;
+  padding: 0.3vw;
   color: white;
+  width: 9vw;
   border-radius: 5px;
 }
