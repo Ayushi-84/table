@@ -49,6 +49,8 @@ body {
 .container {
   height: 78%;
   overflow-y: scroll;
+  margin-left:10px ;
+  margin-right: 10px;
 }
 
 .header {
@@ -62,6 +64,8 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
+  margin-left:10px ;
+  margin-right: 10px;
 }
 
 .header div{
@@ -72,13 +76,13 @@ body {
 textarea {
     resize: none;
     height: 14vh;
-    width: 90.6vw;
+    width: 98vw;
   }
 
 .buttond {
-  background-color: darkblue;
+  background:transparent;
+  border: none;
   padding: 0.3vw;
-  color: white;
+  color: blue;
   width: 9vw;
-  border-radius: 5px;
 }
