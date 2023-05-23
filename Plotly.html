@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotly Bar Graph</title>
+</head>
+<body>
+    
+</body>
+</html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+
+<script>
+    var myPlot = document.getElementById('myPlot');
+var xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yArray = [55, 49, 44, 24, 15];
+var colors =['#00000'];
+
+var data = [{
+  x:xArray,
+  y:yArray,
+  type:"bar",
+  marker: {
+    color: colors,
+},
+  hovertemplate:
+            "No.: %{y}<br>" +
+            "Name: %{x}<br>" +
+            "<extra></extra>"
+}];
+
+var layout = {title:"Plotly Bar Graph",
+hovermode: "closest",
+hoverlabel: { bgcolor: "#000" },
+        // legend: {orientation: 'h', y: -0.3},
+        // xaxis: {
+        //   tickformat: ".0%",
+        //   title: "Automation Probability",
+        //   zeroline: false
+        // },
+        // yaxis: {
+        //   title: "Income",
+        //   zeroline: false
+        // }
+    };
+
+Plotly.newPlot("myPlot", data, layout);
+myPlot.on('plotly_hover', function(data){
+  var pn='',
+      tn='',
+      colors=[];
+  for(var i=0; i < data.points.length; i++){
+    pn = data.points[i].pointNumber;
+    tn = data.points[i].curveNumber;
+    colors = data.points[i].data.marker.color;
+  };
+  colors[pn] = '#C54C82';
+
+  var update = {'marker':{color: colors, size:16}};
+  Plotly.restyle('myPlot', update, [tn]);
+});
+
+myPlot.on('plotly_unhover', function(data){
+  var pn='',
+      tn='',
+      colors=[];
+  for(var i=0; i < data.points.length; i++){
+    pn = data.points[i].pointNumber;
+    tn = data.points[i].curveNumber;
+    colors = data.points[i].data.marker.color;
+  };
+  colors[pn] = '#00000';
+
+  var update = {'marker':{color: colors, size:16}};
+  Plotly.restyle('myPlot', update, [tn]);
+});
+</script>
+
+</body>
+</html>
