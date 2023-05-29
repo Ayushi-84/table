@@ -113,6 +113,7 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 6px;
+    position: relative;
     -webkit-box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
       0 10px 15px 0 rgba(126, 126, 126, 0.12),
       0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
@@ -125,6 +126,34 @@ body {
       0 10px 15px 0 rgba(126, 126, 126, 0.12),
       0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
       0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+  }
+
+  .data:after {
+    content: '';
+    --borderWidth:3px;
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
   
   .heading {
