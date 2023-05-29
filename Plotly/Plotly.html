@@ -50,7 +50,20 @@ hoverlabel: { bgcolor: "#000" },
         // }
     };
 
-Plotly.newPlot("myPlot", data, layout);
+Plotly.newPlot("myPlot", data, layout).then(function() {
+  Plotly.animate('myPlot', 'lower', {
+    transition: {
+      duration: 2000,
+      easing: 'linear'
+    },
+    frame: {
+      duration: 2000,
+      redraw: false,
+    },
+    mode: 'afterall'
+  });
+  });
+
 myPlot.on('plotly_hover', function(data){
   var pn='',
       tn='',
