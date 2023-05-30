@@ -15,8 +15,13 @@
 <body>
     <div class="mainContainer">
        <div class="searchBox">
-<input type="search" placeholder="How can I help you?"/>
-<button type="submit" value="search"><i class="fa fa-search" aria-hidden="true"></i></button>
+<select name="head" id="head">
+    <option value="0" disabled selected>How Can I Help You?</option>
+    <option value="ABC">ABC</option>
+    <option value="DEF">DEF</option>
+    <option value="GHI">GHI</option>
+    <option value="JKL">JKL</option>
+    </select>
        </div>
     </div>
     <div class="container">
@@ -24,19 +29,25 @@
     <div class="head">
             ELI (18HRS)
         </div>
-        <div class="data">
+        <div class="dataR">
                 <div class="heading">
            Researchers 
         </div>
         <div class="colon">
             :
         </div>
-        <div class="headData">
+        <div class="headDataR">
            <div>
             A. 16hrs
            </div>
            <div>
             B. 2hrs
+           </div>
+           <div>
+            C. 2hrs
+           </div>
+       <div>
+            D. 2hrs
            </div>
         </div> 
         
@@ -116,19 +127,41 @@ Complete
       </div>
     </div>
     <div class="container1">
-        <div class="sub">
-        <div class="logo">
-            <div class="logo1">
-        <i class="fas fa-1x fa-battery-full icon"></i>
-    </div>
-    <div class="logo2">
-        <div class="loader" style="--n: 1; --f: 0;"></div>
-    </div>
-    </div>
-        <div class="progress2 progress-moved">
-          <div class="progress-bar2"></div>
+      <div class="PHead">
+          Progress :
+      </div>
+      <div class="PData">
+      <div class="emojiD">
+        <div class="emoji">
+            &#128542;
         </div>
+       <div class="emojiH">
+        Incomplete
+       </div>
     </div>
+        <div class="emojiD">
+            <div class="emoji">
+                &#129300;
+            </div>
+            <div class="emojiH">
+                In Progress
+            </div>
+        </div>
+        <div class="emojiD">
+            <div class="emoji active">
+                &#129303;
+            </div>
+          <div class="emojiH">
+            Complete
+          </div>
+        </div>
+      </div>
+
+      <div class="PPer">
+            <div class="circle per-100">
+              <div class="inner">100%</div>
+            </div>
+      </div>
     </div>
 </body>
 </html>
