@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
 body {
     width: 100%;
     height: 100vh;
@@ -309,13 +315,57 @@ body {
   }
 
   .PData{
-    width: 80%;
+    width: 60%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
    flex-direction: row;
   }
+  .PPer{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background: transparent;
+   flex-wrap: wrap;
+  }
+
+.circle {
+  width: 50%;
+  height: 85%;
+  border-radius: 50%;
+  background: #FFCDB2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle.per-25 {
+  background-image: conic-gradient(#B5838D 25%, #FFCDB2 0);
+}
+.circle.per-50 {
+  background-image: conic-gradient(#B5838D 50%, #FFCDB2 0);
+}
+.circle.per-75 {
+  background-image: conic-gradient(#B5838D 75%, #FFCDB2 0);
+}
+.circle.per-100 {
+  background-image: conic-gradient(#B5838D 100%, #FFCDB2 0);
+}
+.circle .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height:80%;
+  background: #ede4dc;
+  border-radius: 50%;
+  font-size: 2vw;
+  font-weight: 500;
+  color: #000;
+}
 
   .emojiD{
     display: flex;
